@@ -1,0 +1,42 @@
+body {
+    background-color: darkslategray;
+
+}
+
+.leftside {
+    flex: 1;
+    text-align: center;
+    color: plum;
+
+
+}
+
+.center {
+    flex: 1;
+    text-align: center;
+    color:cornsilk;
+
+}
+
+.rightside {
+    flex: 1;
+    text-align: center;
+    color: palegreen;
+
+}
+
+.flexcontainer {
+    display: flex; 
+
+}
+
+
+p {
+    font-size: xx-large;
+    font-family: Curlz;
+}
+
+a {
+    color: cadetblue;
+
+}
