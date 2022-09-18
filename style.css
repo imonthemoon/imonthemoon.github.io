@@ -1,7 +1,15 @@
+* {
+    cursor: url('Butterfly.cur'), default;
+
+}
+
+
 body {
     background-color: rgb(137, 189, 189);
 
 }
+
+
 
 img {
     margin: 0.25in;
@@ -34,7 +42,7 @@ img {
     display: flex;
 
 }
-
+   
 
 p {
     font-size: xx-large;
