@@ -3,6 +3,13 @@ body {
 
 }
 
+img {
+    margin:0.25in;
+    
+
+}
+
+
 .leftside {
     flex: 1;
     text-align: center;
