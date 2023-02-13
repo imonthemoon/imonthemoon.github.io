@@ -1,0 +1,74 @@
+<!doctype html>
+
+<head>
+    <title>Arctic Sanctuary</title>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- <script type="text/javascript" src="arcticsanctuary.js"></script> -->
+
+    <style>
+        @font-face {
+            font-family: Curlz;
+            src: url('../CURLZ.ttf')
+        }
+    </style>
+
+    <p>Welcome to the Arctic Sanctuary! </p>
+
+    <style>
+        body {
+            background-size: 100%;
+
+        }
+        #Div1{
+            background-image: url();
+            background-size: cover;
+            width: 1200px;
+            height:675px;
+            display: inline-block;
+            margin:auto;
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <img class="bg" src="arctic1.jpg" width="170" height=auto>
+    <img class="bg" src="tundra3.jpg" width="170" height=auto>
+    <img class="bg" src="tundra4.jpg" width="170" height=auto>
+<br>
+    <div id="Div1">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <img src="seal.gif"> <pre style="display:inline">                        </pre><img src="bunnystomp.gif" width="170" height="auto"><pre style="display:inline">                                </pre><img src="penguin.png" width="170" height="auto">
+
+
+    </div>
+
+    <script>
+        // select all objects of the class
+        var backgrounds = document.querySelectorAll('.bg');
+
+        // apply an eventlistener which listens for "hover" or mouseover events
+        // when an image is hovered over, the changeBackground function executes
+        backgrounds.forEach((bg) => {
+            bg.addEventListener('mouseover', changeBackground);
+        });
+
+        function changeBackground() {
+            // "this" refers to the image being hovered over
+            // we can get the URL of the image this way
+            var imageURL = this.getAttribute('src');
+            // then we change the body's background to the URL
+            var mydiv = document.getElementById('Div1');
+            mydiv.style.backgroundImage = 'url(' + imageURL + ')';
+        }
+    </script>
+
+</body>
+
+</html>
