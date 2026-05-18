@@ -1,85 +1,165 @@
-<!doctype html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cathryn's Corner</title>
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" href="./style.css" />
-
     <style>
-        @font-face {
-            font-family: Curlz;
-            src: url('CURLZ.ttf')
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
+        body {
+            background-color: #6da2a6;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevents stray scrollbars from edge-to-edge elements */
+            font-family: sans-serif;
+        }
+
+        /* The canvas now takes up 100% of the screen dimensions */
+        .collage-canvas {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .collage-canvas a.no-shake:hover {
+            animation: none;
+        }
+
+        /* Target the link wrappers instead of the images directly */
+        .collage-canvas a {
+            position: absolute;
+            display: inline-block;
+            transition: transform 0.1s ease;
+        }
+
+        .collage-canvas img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            user-select: none;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15)); 
+        }
+
+        /* --- Hover Shake Animation --- */
+        @keyframes shake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            20% { transform: translate(-2px, 1px) rotate(-1deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            60% { transform: translate(-1px, 2px) rotate(0deg); }
+            80% { transform: translate(2px, 1px) rotate(1deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        .collage-canvas a:hover {
+            animation: shake 0.3s infinite linear;
+            cursor: pointer;
+        }
+
+        /* --- Individual Positions --- */
+        .scallop     { width: 13%; top: 3%;   left: 4%; }
+        .iris        { width: 15%; top: 4%;   left: 20%; }
+        .mcqueen     { width: 15%; top: 4%;   left: 33%; }
+        .hummingbird { width: 15%; top: 3%;   left: 48%; }
+        .orchid      { width: 14%; top: 2%;   left: 63%; }
+        .bunny       { width: 14%; top: 5%;   left: 83%; }
+
+        .pink-lily   { width: 16%; top: 29%;  left: 2%; }
+        .conch       { width: 11%; top: 32%;  left: 21%; }
+        .book        { width: 18%; top: 36%;  left: 50%; }
+        .opening     { width: 18%; top: 24%;  left: 64%; }
+        .coquina     { width: 16%; top: 32%;  left: 81%; }
+
+        .farfalle    { width: 14%; top: 57%;  left: 11%; }
+        .pink-shell  { width: 13%; top: 53%;  left: 36%; }
+
+        .seal        { width: 19%; top: 74%;  left: 3%; }
+        .beta        { width: 15%; top: 72%;  left: 26%; }
+        .trish       { width: 24%; top: 63%;  left: 44%; }
+        .spiral      { width: 14%; top: 67%;  left: 66%; }
+        .white-lily  { width: 18%; top: 60%;  left: 80%; }
+
     </style>
-
-
-
 </head>
-
 <body>
-    
-    <div class="flexcontainer">
-        <div class="leftside">
-            
-            <p> <br>
-                <br>
-                <br>Just For Fun
-                <br><a href="bunnygarden"> Bunny Garden</a>
-                <br><a href="arcticsanctuary/"> Arctic Sancutary</a>
-                <br><a style="font-family: Curlz; font-size: xx-large; "href="lanadelreylyrics"> Lana Del Rey Lyric Generator</a> 
-                <br><a href="https://www.youtube.com/watch?v=7N9-FODmuBA">Moon Jellyfish Live Stream</a>
-            </p>
 
-        </div>
+    <div class="collage-canvas">
+        <a href="#" class="scallop no-shake"><img src="thumbnails/scallop_shell.png" alt="Scallop Shell"></a>
+        <a href="lanadelreylyrics/index.html" class="iris"><img src="thumbnails/iris.png" alt="Iris"></a>
+        <a href="https://substack.com/@imonthemoon/posts" class="mcqueen"><img src="thumbnails/alexander_mcqueen_the_overlook.png" alt="Alexander McQueen The Overlook"></a>
+        <a href="https://www.inaturalist.org/people/imonthemoon" class="hummingbird"><img src="thumbnails/hummingbird.png" alt="Hummingbird"></a>
+        <a href="https://josephinesnextmillionmiles.com/" class="orchid"><img src="thumbnails/orchid.png" alt="Orchid"></a>
+        <a href="bunnygarden/index.html" class="bunny"><img src="thumbnails/Bunny.png" alt="Bunny"></a>
 
-        <div class="center">
-            <p>
-                Welcome to Cathryn's Corner
-                <img src="ballet4.jpg" style="width: 300px;">
-                <br> <p style="color:palegreen; font-family: Curlz;"> Music
-                <br><a href="https://beautifulgirlsbeautifulboys.bandcamp.com/album/mason-cathryns-twee-cover-album"> beautiful girls, beautiful boys</a>
-                <br><a href="https://josephinesnextmillionmiles.com/"> Josephine's Next Million Miles</a>
-                <br><a href="https://gggblyymusic.substack.com/archive"> Great Great Great Beautiful Lives Yes Yes</a></p> 
-            </p>
-        </div>
+        <a href="#" class="pink-lily no-shake"><img src="thumbnails/pink_lily.png" alt="Pink Lily"></a>
+        <a href="https://www.youtube.com/watch?v=7N9-FODmuBA" class="conch"><img src="thumbnails/conch_shell.png" alt="Conch Shell"></a>
+        <a href="https://www.goodreads.com/user/show/151530331-cathryn-gold" class="book"><img src="thumbnails/cookie_mueller_book.png" alt="Cookie Mueller Book"></a>
+        <a href="https://letterboxd.com/imonthemoon/" class="opening"><img src="thumbnails/Opening_Night.png" alt="Opening Night"></a>
+        <a href="https://gggblyymusic.substack.com/archive" class="coquina"><img src="thumbnails/coquina_shell.png" alt="Coquina Shell"></a>
 
-        <div class="rightside">
-            
-            <p>
-                <br>
-                <br>
-                <br>Thoughts
-                <br><a href="https://imonthemoon.substack.com"> Substack</a>
-                <br><a href="https://rateyourmusic.com/~farfalle23"> Rate Your Music</a>
-                <br><a href="https://letterboxd.com/imonthemoon/"> Letterboxd</a>
-                <br><a href="https://www.goodreads.com/user/show/151530331-cathryn-gold"> GoodReads</a>
-                <br><a href="https://www.fragrantica.com/member/2643403#wardrobe"> Fragrantica</a>
-            </p>
+        <a href="https://beautifulgirlsbeautifulboys.bandcamp.com/album/mason-cathryns-twee-cover-album" class="farfalle"><img src="thumbnails/farfalle_pasta.png" alt="Farfalle Pasta"></a>
+        <a href="#" class="pink-shell no-shake"><img src="thumbnails/pink shell.png" alt="Pink Shell"></a>
 
-        </div>
+        <a href="arcticsanctuary/index.html" class="seal"><img src="thumbnails/Seal.png" alt="Seal"></a>
+        <a href="#" class="beta no-shake"><img src="thumbnails/beta_fish.png" alt="Beta Fish"></a>
+        <a href="https://rateyourmusic.com/~farfalle23" class="trish"><img src="thumbnails/trish_keenan.png" alt="Trish Keenan"></a>
+        <a href="#" class="spiral no-shake"><img src="thumbnails/spiral_shell.png" alt="Spiral Shell"></a>
+        <a href="https://www.fragrantica.com/member/2643403#wardrobe" class="white-lily"><img src="thumbnails/white_lily.png" alt="White Lily"></a>
     </div>
 
-    <div class="snowflakes">
-        <!-- add your 'snowflake' images below -->
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-        <div class="snowflake"><img src="farfallenoodle.png" style="width:70px;" /></div>
-    </div>
-    </div>
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx;
 
+        function playSynthSound(leftPercent, topPercent) {
+            if (!audioCtx) {
+                audioCtx = new AudioContext();
+            }
+
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            const minHz = 220; 
+            const maxHz = 784; 
+            const frequency = minHz + ((leftPercent / 100) * (maxHz - minHz));
+            oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+
+            const minDuration = 0.1;
+            const maxDuration = 0.4;
+            const duration = minDuration + ((topPercent / 100) * (maxDuration - minDuration));
+
+            oscillator.type = 'triangle';
+
+            gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + duration);
+        }
+
+        // disable synth for now
+        // document.querySelectorAll('.collage-canvas a').forEach(link => {
+        //     link.addEventListener('mouseenter', () => {
+        //         const rect = link.getBoundingClientRect();
+        //         const parentRect = link.parentElement.getBoundingClientRect();
+                
+        //         const leftPercent = ((rect.left - parentRect.left) / parentRect.width) * 100;
+        //         const topPercent = ((rect.top - parentRect.top) / parentRect.height) * 100;
+
+        //         playSynthSound(leftPercent, topPercent);
+        //     });
+        // });
+    </script>
 </body>
-
 </html>
-
-<!--git add .
-    git commit -m " "
-    git push-->
