@@ -43,11 +43,14 @@ img {
 
 }
    
+h1 {
+    color: cornsilk;
+}
+
 
 p {
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
-    color: cornsilk;
 }
 
 a {
