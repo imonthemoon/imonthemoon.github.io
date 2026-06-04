@@ -1,0 +1,4 @@
+To commit/change files/push new things to the website run this in the terminal.
+Make sure all of your file are saved first (Cmd + S when you have it open)
+
+./commit_all_files.sh
